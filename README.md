@@ -148,15 +148,15 @@ An sometimes when you want to download a file from google colab you cannot downl
 
 Run this command:
 "!yolo detect predict model=runs/detect/train/weights/best.pt source=data/validation/images save=True"
-
 This command tell YOLO to run prediction for weights stored in runs with the validation images and save the data. The saved data consists of prediction results and images in the output directory.
 
-Now run the below command:
+
 "import glob
 from IPython.display import Image, display
 for image_path in glob.glob(f'/content/runs/detect/predict/*.jpg')[:10]:
   display(Image(filename=image_path, height=400))
   print('\n')"
+  
 
 
 This command finds the path names and displays the images in the notebook. It displays the first 10 images from the 'content/run/detect/predict/directory' (images that have already been predicted).
